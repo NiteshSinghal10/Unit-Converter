@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Convertor</title>
+    <link rel="stylesheet" href="unit.css">
+</head>
+<body>
+    <h1>Unit <span>Convertor</span></h1>
+    <div class="container">
+        <div class="main">
+            <button class="btn" id="length" onclick="work(id)">Length</button>
+            <button class="btn" id="temperature" onclick="work(id)">Temperature</button>
+            <button class="btn" id="weight" onclick="work(id)">Weight</button>
+            <button class="btn" id="time" onclick="work(id)">Time</button>
+            
+            <div id="input">
+                <label for="from">From:</label><br>
+                <input type="number" name="from" value="0" id="invalue" >
+            </div>
+            <div id="output">
+                <label for="to">To:</label><br>
+                <input type="text" id="outvalue" name="to" value="0" style="background-color: rgba(207, 193, 193,0.8);font-weight: 600;" disabled>
+            </div>
+
+            <div id="inunit">
+                <select name="meter" id="l1drop"  >
+                    <option value="7">Kilometer</option>
+                    <option value="4">Meter</option>
+                    <option value="2">Centimeter</option>
+                    <option value="1">Millimeter</option>
+                </select>
+
+                <select name="celsius" id="t1drop" hidden >
+                    <option value="2">Celsius</option>
+                    <option value="10">Fahrenheit</option>
+                    <option value="1">Kelvin</option>
+                </select>
+
+                <select name="kilogram" id="w1drop" hidden >
+                    <option value="7">Kilogram</option>
+                    <option value="4">Gram</option>
+                    <option value="1">Milligram</option>
+                </select>
+
+                <select name="second" id="ti1drop" hidden >
+                    <option value="3">Hour</option>
+                    <option value="2">Minute</option>
+                    <option value="1">Second</option>
+                </select>
+            </div>
+
+            <div id="outunit">
+                <select name="meter" id="l2drop" >
+                    <option value="7" >Kilometer</option>
+                    <option value="4" >Meter</option>
+                    <option value="2" >Centimeter</option>
+                    <option value="1" >Millimeter</option>
+                </select>
+
+                <select name="celsius" id="t2drop" hidden >
+                    <option value="2">Celsius</option>
+                    <option value="10">Fahrenheit</option>
+                    <option value="1">Kelvin</option>
+                </select>
+
+                <select name="kilogram" id="w2drop" hidden >
+                    <option value="7">Kilogram</option>
+                    <option value="4">Gram</option>
+                    <option value="1">Milligram</option>
+                </select>
+
+                <select name="second" id="ti2drop" hidden >
+                    <option value="3">Hour</option>
+                    <option value="2">Minute</option>
+                    <option value="1">Second</option>
+                    
+                </select>
+            </div>
+
+            <button id="convert" onclick="result()">Convert</button>
+            
+        </div>
+    </div>
+    
+    <script src="unit.js"></script>
+</body>
+</html>
